@@ -4,6 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Livnhigh</title>
+    <meta name="title" content="Livnhigh">
+    <meta name="description" content="">
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.livnhigh.co.nz/">
+    <meta property="og:title" content="Livnhigh">
+    <meta itemprop="name" content="Livnhigh">
+    <meta property="og:description" content="">
+    <meta itemproperty="description" content="">
+    <meta property="og:image" content="">
+    <meta itemprop="thumbnailUrl" content="">
+
+
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="lib/menu/style.css">
@@ -407,9 +420,11 @@
     // tracks index of current section
     let currentSectionIndex = 0;
 
-    document.addEventListener('touchmove', e => {
-        alert(e.wheelDeltaY);
-        alert(window.scrollY);
+    $(document).on('touchmove', function () { //touchmove works for iOS, I don't know if Android supports it
+        $(document).trigger('mousewheel');
+    });
+
+    document.addEventListener('mousewheel', e => {
         /*
         if (e.wheelDeltaY > 0 && currentSectionIndex - 1 >= 0) {
             // wheel up
