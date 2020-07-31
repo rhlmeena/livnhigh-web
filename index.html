@@ -407,7 +407,9 @@
     // tracks index of current section
     let currentSectionIndex = 0;
 
-    document.addEventListener('wheel', e => {
+    document.addEventListener('touchmove', e => {
+        alert(e.wheelDeltaY);
+        alert(window.scrollY);
         /*
         if (e.wheelDeltaY > 0 && currentSectionIndex - 1 >= 0) {
             // wheel up
