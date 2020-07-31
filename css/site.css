@@ -15,7 +15,6 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    overflow: hidden;
 }
 
 h1 {
