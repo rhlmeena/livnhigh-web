@@ -1,0 +1,560 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livnhigh</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="lib/menu/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<header class="header">        
+        <div class="row">
+            <div class="col">
+                <span class="menu-icon" onclick="openNav()">&#9776;</span>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="https://localhost:44321/">Home</a>
+                        <a href="https://localhost:44321/">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col company-logo">
+                <img src="images/logo.png" class="img-fluid" />
+            </div>
+            <div class="col social-media">
+                <span class="social-media-msg">follow us</span>
+                <a href="https://www.facebook.com/drinklivnhigh">
+                    <img src="images/facebook_icon34.png" class="facebookIcon" />
+                </a>
+                <a href="https://www.instagram.com/drinklivnhigh" class="instagramIcon">
+                    <img src="images/instagram_icon34.png" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <div id="section-1" class="bg blue">
+<section class="active" data-section="0">
+    <div class="section-main">
+        <div class="section-main-image">
+            <div class="row" style="margin-right: 0px;">
+                <div class="col"></div>
+                <div class="col section-main-message">
+                    <h1>The Fun Never Stops</h1>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div id="ourStory" style="display:none;">
+            <div class="row" style="margin-right: 0px;">
+                <div class="col"></div>
+                <div class="col-6 section-main-sub-message">
+                    <h2>Our Product</h2>
+                    <p>A short story is a piece of prose fiction that typically can be read in one sitting and focuses on a self-contained incident or series of linked incidents, with the intent of evoking</p>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div id="vodkaRaspberry" style="height: 100%; top: 1200px; display: none;">
+            <div style="height:70%; width: 100%">
+                <div class="section-product">
+                    <div class="section-product-detail-pc">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                            </div>
+                            <div class="col">
+                                <div class="section-product-type-left">
+                                    <img src="images/big icons_raspberry.png" align="right" class="section-product-type-img" />
+                                    <p class="section-product-name">vodka and raspberry with sparkling water</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <img src="images/raspberry-can.png" class="section-product-img" />
+                            </div>
+                            <div class="col">
+                                <div class="section-product-type-right">
+                                    <p class="section-product-type-info">10-pack cans</p>
+                                    <button type="button" class="btn btn-outline-dark btn-lg">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="section-product-detail-mobile">
+                        <div class="row" style="margin: 0;">
+                            <div class="col">
+                                <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                            </div>
+                            <div class="col" style="padding-left: 0px;">
+                                <div style="text-align: center;">
+                                    <p class="section-product-name">vodka and raspberry with sparkling water</p>
+                                    <img src="images/raspberry-can.png" class="section-product-img" />
+                                    <div class="section-product-add-to-cart">
+                                        <button type="button" class="btn btn-secondary">ADD TO CART</button>
+                                    </div>                                    
+                                </div>                                
+                            </div>
+                            <div class="col">
+                                <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>                
+            </div>
+            <div class="product-description">
+                <div class="product-description-panel">
+                    <p class="product-description-info">
+                        A product description is the marketing copy used to describe a product's value proposition to potential customers.
+                    </p>
+                    <div class="product-description-imgs">
+                        <img src="images/small_icons_raspberry_select.png" />
+                        <img src="images/small_icons_apple_pear_un-select.png" />
+                        <img src="images/small_icons_passionfruit_un-select.png" />
+                        <img src="images/small_icons_guava pink_un-select.png" />
+                        <img src="images/small_icons_pomegranate_un-select.png" />
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</section>
+<section data-section="1">
+    <div id="applePear" style="display: none;" class="applePear-bg">
+        <div style="height:70%; width: 100%">
+            <div class="section-product">
+                <div class="section-product-detail-pc">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-left">
+                                <img src="images/big_icons_apple_pear.png" align="right" class="section-product-type-img" />
+                                <p class="section-product-name">vodka, apple and pear with sparkling water</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/apple-pear-can.png" class="section-product-img" />
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-right">
+                                <p class="section-product-type-info">10-pack cans</p>
+                                <button type="button" class="btn btn-outline-dark btn-lg">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-product-detail-mobile">
+                    <div class="row" style="margin: 0;">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col" style="padding-left: 0px;">
+                            <div style="text-align: center;">
+                                <p class="section-product-name">vodka, apple and pear with sparkling water</p>
+                                <img src="images/raspberry-can.png" class="section-product-img" />
+                                <div class="section-product-add-to-cart">
+                                    <button type="button" class="btn btn-secondary">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="product-description-panel">
+                <p class="product-description-info">
+                    A product description is the marketing copy used to describe a product's value proposition to potential customers.
+                </p>
+                <div class="product-description-imgs">
+                    <img src="images/small_icons_raspberry_un-select.png" />
+                    <img src="images/small_icons_apple_pear_select.png" />
+                    <img src="images/small_icons_passionfruit_un-select.png" />
+                    <img src="images/small_icons_guava pink_un-select.png" />
+                    <img src="images/small_icons_pomegranate_un-select.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-section="2">
+    <div id="passionfruit" style="display: none;" class="passionfruit-bg">
+        <div style="height:70%; width: 100%">
+            <div class="section-product">
+                <div class="section-product-detail-pc">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-left">
+                                <img src="images/big_icons_passionfruit.png" align="right" class="section-product-type-img" />
+                                <p class="section-product-name">vodka and passionfruit with spakling water</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/passionfruit-can.png" class="section-product-img" />
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-right">
+                                <p class="section-product-type-info">10-pack cans</p>
+                                <button type="button" class="btn btn-outline-dark btn-lg">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-product-detail-mobile">
+                    <div class="row" style="margin: 0;">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col" style="padding-left: 0px;">
+                            <div style="text-align: center;">
+                                <p class="section-product-name">vodka and passionfruit with spakling water</p>
+                                <img src="images/raspberry-can.png" class="section-product-img" />
+                                <div class="section-product-add-to-cart">
+                                    <button type="button" class="btn btn-secondary">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="product-description-panel">
+                <p class="product-description-info">
+                    A product description is the marketing copy used to describe a product's value proposition to potential customers.
+                </p>
+                <div class="product-description-imgs">
+                    <img src="images/small_icons_raspberry_un-select.png" />
+                    <img src="images/small_icons_apple_pear_un-select.png" />
+                    <img src="images/small_icons_passionfruit_select.png" />
+                    <img src="images/small_icons_guava pink_un-select.png" />
+                    <img src="images/small_icons_pomegranate_un-select.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-section="3">
+    <div id="guavapink" style="display: none;" class="guavapink-bg">
+        <div style="height:70%; width: 100%">
+            <div class="section-product">
+                <div class="section-product-detail-pc">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-left">
+                                <img src="images/big icons_guava pink.png" align="right" class="section-product-type-img" />
+                                <p class="section-product-name">gin and guava pink with sparkling water</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/gin-guava-pink-can.png" class="section-product-img" />
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-right">
+                                <p class="section-product-type-info">10-pack cans</p>
+                                <button type="button" class="btn btn-outline-dark btn-lg">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-product-detail-mobile">
+                    <div class="row" style="margin: 0;">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col" style="padding-left: 0px;">
+                            <div style="text-align: center;">
+                                <p class="section-product-name">gin and guava pink with sparkling water</p>
+                                <img src="images/gin-guava-pink-can.png" class="section-product-img" />
+                                <div class="section-product-add-to-cart">
+                                    <button type="button" class="btn btn-secondary">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="product-description-panel">
+                <p class="product-description-info">
+                    A product description is the marketing copy used to describe a product's value proposition to potential customers.
+                </p>
+                <div class="product-description-imgs">
+                    <img src="images/small_icons_raspberry_un-select.png" />
+                    <img src="images/small_icons_apple_pear_un-select.png" />
+                    <img src="images/small_icons_pomegranate_un-select.png" />
+                    <img src="images/small_icons_guava_select.png" />
+                    <img src="images/small_icons_pomegranate_un-select.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-section="4">
+    <div id="pomegranate" style="display: none;" class="pomegranate-bg">
+        <div style="height:70%; width: 100%">
+            <div class="section-product">
+                <div class="section-product-detail-pc">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-left">
+                                <img src="images/big_icons_pomegranate.png" align="right" class="section-product-type-img" />
+                                <p class="section-product-name">gin, pomegranate and hibiscus with sparkling water</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/gin-guava-pink-can.png" class="section-product-img" />
+                        </div>
+                        <div class="col">
+                            <div class="section-product-type-right">
+                                <p class="section-product-type-info">10-pack cans</p>
+                                <button type="button" class="btn btn-outline-dark btn-lg">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-product-detail-mobile">
+                    <div class="row" style="margin: 0;">
+                        <div class="col">
+                            <h4 class="section-product-tagline-left">Zero Sugar</h4>
+                        </div>
+                        <div class="col" style="padding-left: 0px;">
+                            <div style="text-align: center;">
+                                <p class="section-product-name">gin and guava pink with sparkling water</p>
+                                <img src="images/gin-guava-pink-can.png" class="section-product-img" />
+                                <div class="section-product-add-to-cart">
+                                    <button type="button" class="btn btn-secondary">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4 class="section-product-tagline-right">Zero Sugar</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="product-description-panel">
+                <p class="product-description-info">
+                    A product description is the marketing copy used to describe a product's value proposition to potential customers.
+                </p>
+                <div class="product-description-imgs">
+                    <img src="images/small_icons_raspberry_un-select.png" />
+                    <img src="images/small_icons_apple_pear_un-select.png" />
+                    <img src="images/small_icons_pomegranate_un-select.png" />
+                    <img src="images/small_icons_guava pink_un-select.png" />
+                    <img src="images/small_icons_pomegranate_select.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    let sections = document.getElementsByTagName('section');
+    // tracks index of current section
+    let currentSectionIndex = 0;
+
+    document.addEventListener('wheel', e => {
+        /*
+        if (e.wheelDeltaY > 0 && currentSectionIndex - 1 >= 0) {
+            // wheel up
+            $(".section-main-image").animate({ top: '0px', opacity: '0.5' }, 1000);
+            currentSectionIndex--;
+            if (currentSectionIndex == 0) {
+                $("#section-main-image").slideUp("slow");
+            }
+            else {
+                sections[currentSectionIndex].className = '';
+                currentSectionIndex--;
+                sections[currentSectionIndex].className = 'active';
+            }
+
+    } else if (e.wheelDeltaY < 0 && currentSectionIndex + 1 < sections.length) {
+        // wheel down
+        $(".section-main-image").animate({ bottom: '100vh', opacity: '0' }, 1000);
+        //sections[currentSectionIndex].className = '';
+        currentSectionIndex++;
+        //sections[currentSectionIndex].className = 'active';
+    }
+         */
+
+        if (e.wheelDeltaY > 0) {
+            // wheel up
+            if (currentSectionIndex == 1) {
+                $("#vodkaRaspberry").stop(true, false).animate({ bottom: '100vh', opacity: '1' }, 1500);
+                $(".section-main-image").stop(true, false).animate({ bottom: '0vh', opacity: '1' }, 1500);
+                $("#ourStory").stop(true, false).fadeOut(1000);
+                currentSectionIndex--;
+            }
+            else if (currentSectionIndex == 2) {
+                document.getElementById("vodkaRaspberry").style.display = "none";
+                $("#ourStory").stop(true, false).fadeIn(1000);
+                currentSectionIndex--;
+            }
+            else if (currentSectionIndex == 3) {
+                $("#applePear").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
+                    sections[currentSectionIndex - 1].className = '';
+                    sections[currentSectionIndex - 2].className = 'active';
+                    $(".section-main").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                }); 
+                currentSectionIndex--;
+            }
+            else if (currentSectionIndex == 4) {
+                $("#passionfruit").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
+                    sections[currentSectionIndex - 1].className = '';
+                    sections[currentSectionIndex - 2].className = 'active';
+                    $("#applePear").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+                currentSectionIndex--;
+            }
+            else if (currentSectionIndex == 5) {
+                $("#guavapink").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
+                    sections[currentSectionIndex - 1].className = '';
+                    sections[currentSectionIndex - 2].className = 'active';
+                    $("#passionfruit").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+                currentSectionIndex--;
+            }
+            else if (currentSectionIndex == 6) {
+                $("#pomegranate").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
+                    sections[currentSectionIndex - 1].className = '';
+                    sections[currentSectionIndex - 2].className = 'active';
+                    $("#guavapink").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+                currentSectionIndex--;
+            }
+            /*if (currentSectionIndex == 0) {
+                $("#section-main-image").slideUp("slow");
+            }
+            else {
+                sections[currentSectionIndex].className = '';
+                currentSectionIndex--;
+                sections[currentSectionIndex].className = 'active';
+            }*/
+            
+        } else if (e.wheelDeltaY < 0) {
+            // wheel down
+            if (currentSectionIndex == 0) {
+                $(".section-main-image").stop(true, false).animate({ bottom: '100vh', opacity: '0' }, 1500);
+                $("#ourStory").stop(true, false).fadeIn(1000);
+                currentSectionIndex++;
+            }
+            else if (currentSectionIndex == 1) {
+                $("#ourStory").stop(true, false).fadeOut(1500, function () {
+                    $("#vodkaRaspberry").stop(true, false).fadeIn(1000);
+                });
+                //$("#vodkaRaspberry").animate({ top: '0vh', display: 'block'}, 1500);
+                currentSectionIndex++;
+            }
+            else if (currentSectionIndex == 2) {
+                $(".section-main").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                    sections[0].className = '';
+                    sections[1].className = 'active';
+                    //$("#applePear").css({ "display": "block" });
+                    //$("#applePear").css({ "animation": "run 5s" });
+                    $("#applePear").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                    $("#applePear").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+                               
+                currentSectionIndex++;
+            }
+            else if (currentSectionIndex == 3) {
+                $("#applePear").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                    sections[1].className = '';
+                    sections[2].className = 'active';
+                    //$("#applePear").css({ "display": "block" });
+                    //$("#applePear").css({ "animation": "run 5s" });
+                    $("#passionfruit").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                    $("#passionfruit").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+
+                currentSectionIndex++;
+            }
+            else if (currentSectionIndex == 4) {
+                $("#passionfruit").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                    sections[2].className = '';
+                    sections[3].className = 'active';
+                    //$("#applePear").css({ "display": "block" });
+                    //$("#applePear").css({ "animation": "run 5s" });
+                    $("#guavapink").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                    $("#guavapink").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+
+                currentSectionIndex++;
+            }
+            else if (currentSectionIndex == 5) {
+                $("#guavapink").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                    sections[3].className = '';
+                    sections[4].className = 'active';
+                    //$("#applePear").css({ "display": "block" });
+                    //$("#applePear").css({ "animation": "run 5s" });
+                    $("#pomegranate").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                    $("#pomegranate").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                });
+
+                currentSectionIndex++;
+            }
+            //sections[currentSectionIndex].className = '';
+            //sections[currentSectionIndex].className = 'active';
+        }
+    });
+</script>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
