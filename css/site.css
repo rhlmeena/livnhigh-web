@@ -15,6 +15,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    overflow: hidden;
 }
 
 h1 {
@@ -265,6 +266,14 @@ section.active {
     width: 100%;
     height: 100%;
     color: white;
+}
+
+.aboutus-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: black;
 }
 
 /********************************************* IPad *******************************************************************/

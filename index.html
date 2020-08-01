@@ -415,14 +415,18 @@
         </div>
     </div>
 </section>
+<section data-section="5">
+    <div id="aboutUs" style="display: none;" class="aboutus-bg">
+        <div style="position: relative;padding-top: 165px;">
+            <h2>About Us</h2>
+            <p>This is about us</p>
+        </div>
+    </div>
+</section>
 <script type="text/javascript">
     let sections = document.getElementsByTagName('section');
     // tracks index of current section
     let currentSectionIndex = 0;
-
-    $(document).on('touchmove', function () { //touchmove works for iOS, I don't know if Android supports it
-        document.write("hi");
-    });
 
     document.addEventListener('mousewheel', e => {
         /*
@@ -463,34 +467,42 @@
             }
             else if (currentSectionIndex == 3) {
                 $("#applePear").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
-                    sections[currentSectionIndex - 1].className = '';
-                    sections[currentSectionIndex - 2].className = 'active';
-                    $(".section-main").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
-                }); 
+                    sections[1].className = '';
+                });
+                sections[0].className = 'active';
+                $(".section-main").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 currentSectionIndex--;
             }
             else if (currentSectionIndex == 4) {
                 $("#passionfruit").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
-                    sections[currentSectionIndex - 1].className = '';
-                    sections[currentSectionIndex - 2].className = 'active';
-                    $("#applePear").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                    sections[2].className = '';
                 });
+                sections[1].className = 'active';
+                $("#applePear").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 currentSectionIndex--;
             }
             else if (currentSectionIndex == 5) {
                 $("#guavapink").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
-                    sections[currentSectionIndex - 1].className = '';
-                    sections[currentSectionIndex - 2].className = 'active';
-                    $("#passionfruit").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                    sections[3].className = '';
                 });
+                sections[2].className = 'active';
+                $("#passionfruit").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 currentSectionIndex--;
             }
             else if (currentSectionIndex == 6) {
                 $("#pomegranate").stop(true, false).animate({ left: '100%', opacity: '0' }, 1000, function () {
-                    sections[currentSectionIndex - 1].className = '';
-                    sections[currentSectionIndex - 2].className = 'active';
-                    $("#guavapink").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                    sections[4].className = '';
                 });
+                sections[3].className = 'active';
+                $("#guavapink").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                currentSectionIndex--;
+            }
+            else if (currentSectionIndex == 7) {
+                $("#aboutUs").stop(true, false).animate({ top: '100%', opacity: '0' }, 1000, function () {
+                    sections[5].className = '';
+                });
+                sections[4].className = 'active';
+                $("#pomegranate").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 currentSectionIndex--;
             }
             /*if (currentSectionIndex == 0) {
@@ -519,48 +531,55 @@
             else if (currentSectionIndex == 2) {
                 $(".section-main").animate({ left: '-100%', opacity: '0' }, 1000, function () {
                     sections[0].className = '';
-                    sections[1].className = 'active';
-                    //$("#applePear").css({ "display": "block" });
-                    //$("#applePear").css({ "animation": "run 5s" });
-                    $("#applePear").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
-                    $("#applePear").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+                    
                 });
-                               
+                sections[1].className = 'active';
+                $("#applePear").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                $("#applePear").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);        
                 currentSectionIndex++;
             }
             else if (currentSectionIndex == 3) {
                 $("#applePear").animate({ left: '-100%', opacity: '0' }, 1000, function () {
                     sections[1].className = '';
-                    sections[2].className = 'active';
-                    //$("#applePear").css({ "display": "block" });
-                    //$("#applePear").css({ "animation": "run 5s" });
-                    $("#passionfruit").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
-                    $("#passionfruit").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 });
-
+                sections[2].className = 'active';
+                $("#passionfruit").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                $("#passionfruit").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 currentSectionIndex++;
             }
             else if (currentSectionIndex == 4) {
                 $("#passionfruit").animate({ left: '-100%', opacity: '0' }, 1000, function () {
                     sections[2].className = '';
-                    sections[3].className = 'active';
-                    //$("#applePear").css({ "display": "block" });
-                    //$("#applePear").css({ "animation": "run 5s" });
-                    $("#guavapink").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
-                    $("#guavapink").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 });
+                sections[3].className = 'active';
+                //$("#applePear").css({ "display": "block" });
+                //$("#applePear").css({ "animation": "run 5s" });
+                $("#guavapink").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                $("#guavapink").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
 
                 currentSectionIndex++;
             }
             else if (currentSectionIndex == 5) {
                 $("#guavapink").animate({ left: '-100%', opacity: '0' }, 1000, function () {
                     sections[3].className = '';
-                    sections[4].className = 'active';
-                    //$("#applePear").css({ "display": "block" });
-                    //$("#applePear").css({ "animation": "run 5s" });
-                    $("#pomegranate").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
-                    $("#pomegranate").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 });
+                sections[4].className = 'active';
+                //$("#applePear").css({ "display": "block" });
+                //$("#applePear").css({ "animation": "run 5s" });
+                $("#pomegranate").css({ "display": "block", "position": "relative", "opacity": 0, "left": "100%" });
+                $("#pomegranate").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+
+                currentSectionIndex++;
+            }
+            else if (currentSectionIndex == 6) {
+                $("#pomegranate").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                    sections[4].className = '';
+                });
+                sections[5].className = 'active';
+                //$("#applePear").css({ "display": "block" });
+                //$("#applePear").css({ "animation": "run 5s" });
+                $("#aboutUs").css({ "display": "block", "position": "relative", "opacity": 0, "top": "100%" });
+                $("#aboutUs").stop(true, false).animate({ top: '0px', opacity: '1' }, 1000);
 
                 currentSectionIndex++;
             }
