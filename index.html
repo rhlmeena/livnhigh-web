@@ -587,6 +587,50 @@
             //sections[currentSectionIndex].className = 'active';
         }
     });
+
+    function onMenueClick(option) {
+        //if selected option and current option is same, do nothing
+        if (option == currentSectionIndex) {
+            break;
+        }
+
+        if (currentSectionIndex == 0) {
+            $(".section-main-image").stop(true, false).animate({ bottom: '100vh', opacity: '0' }, 1500);
+        }
+        else if (currentSectionIndex == 1) {
+            $("#ourStory").stop(true, false).fadeOut(1500, function ());
+        }
+        else if (currentSectionIndex == 2) {
+            $(".section-main").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                sections[0].className = '';
+            });
+        }
+        else if (currentSectionIndex == 3) {
+            $("#applePear").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                sections[1].className = '';
+            });
+        }
+        else if (currentSectionIndex == 4) {
+            $("#passionfruit").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                sections[2].className = '';
+            });
+        }
+        else if (currentSectionIndex == 5) {
+            $("#guavapink").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                sections[3].className = '';
+            });
+        }
+        else if (currentSectionIndex == 6) {
+            $("#pomegranate").animate({ left: '-100%', opacity: '0' }, 1000, function () {
+                sections[4].className = '';
+            });
+        }
+
+        if (option = 0) {
+            sections[0].className = 'active';
+            $(".section-main").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
+        }
+    }
 </script>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
