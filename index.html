@@ -32,11 +32,10 @@
                 <div id="myNav" class="overlay">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="overlay-content">
-                        <a href="https://localhost:44321/">Home</a>
-                        <a href="https://localhost:44321/">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
+                        <a id="homeMenue" href="#">Home</a>
+                        <a id="productsMenue" href="#">Products</a>
+                        <a id="aboutUsMenue" href="#">About Us</a>
+                        <a id="contactUsMene" href="#">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -65,8 +64,8 @@
     </script>
     <div id="section-1" class="bg blue">
 <section class="active" data-section="0">
-    <div class="section-main">
-        <div class="section-main-image">
+    <div id="homePanel" class="section-main">
+        <div id="wellcomeMsg" class="section-main-image">
             <div class="row" style="margin-right: 0px;">
                 <div class="col"></div>
                 <div class="col section-main-message">
@@ -152,7 +151,7 @@
     </div>
 </section>
 <section data-section="1">
-    <div id="applePear" style="display: none;" class="applePear-bg">
+    <div id="applePear" style="display: block;" class="applePear-bg">
         <div style="height:70%; width: 100%">
             <div class="section-product">
                 <div class="section-product-detail-pc">
@@ -218,7 +217,7 @@
     </div>
 </section>
 <section data-section="2">
-    <div id="passionfruit" style="display: none;" class="passionfruit-bg">
+    <div id="passionfruit" style="display: block;" class="passionfruit-bg">
         <div style="height:70%; width: 100%">
             <div class="section-product">
                 <div class="section-product-detail-pc">
@@ -284,7 +283,7 @@
     </div>
 </section>
 <section data-section="3">
-    <div id="guavapink" style="display: none;" class="guavapink-bg">
+    <div id="guavapink" style="display: block;" class="guavapink-bg">
         <div style="height:70%; width: 100%">
             <div class="section-product">
                 <div class="section-product-detail-pc">
@@ -350,7 +349,7 @@
     </div>
 </section>
 <section data-section="4">
-    <div id="pomegranate" style="display: none;" class="pomegranate-bg">
+    <div id="pomegranate" style="display: block;" class="pomegranate-bg">
         <div style="height:70%; width: 100%">
             <div class="section-product">
                 <div class="section-product-detail-pc">
@@ -365,7 +364,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <img src="images/gin-guava-pink-can.png" class="section-product-img" />
+                            <img src="images/pomegranate-hibiscus-can.png" class="section-product-img" />
                         </div>
                         <div class="col">
                             <div class="section-product-type-right">
@@ -417,9 +416,13 @@
 </section>
 <section data-section="5">
     <div id="aboutUs" style="display: none;" class="aboutus-bg">
-        <div style="position: relative;padding-top: 165px;">
-            <h2>About Us</h2>
-            <p>This is about us</p>
+        <div class="row" style="margin-right: 0px;">
+            <div class="col"></div>
+            <div class="col-6 section-main-sub-message">
+                <h2>About Us</h2>
+                <p>A short story is story about us fiction that typically can be read in one sitting and focuses on a self-contained incident or series of linked incidents, with the intent of evoking</p>
+            </div>
+            <div class="col"></div>
         </div>
     </div>
 </section>
@@ -427,6 +430,8 @@
     let sections = document.getElementsByTagName('section');
     // tracks index of current section
     let currentSectionIndex = 0;
+
+    
 
     document.addEventListener('mousewheel', e => {
         /*
@@ -456,8 +461,12 @@
             // wheel up
             if (currentSectionIndex == 1) {
                 $("#vodkaRaspberry").stop(true, false).animate({ bottom: '100vh', opacity: '1' }, 1500);
-                $(".section-main-image").stop(true, false).animate({ bottom: '0vh', opacity: '1' }, 1500);
-                $("#ourStory").stop(true, false).fadeOut(1000);
+                $("#ourStory").stop(true, false).fadeOut(1000, function () {
+                    //$(".section-main-image").css({ "display": "block" });
+                    $("#wellcomeMsg").css({ "display": "block" });
+                    $(".section-main-image").css({ "bottom": "100vh" });
+                    $(".section-main-image").stop(true, false).animate({ bottom: '0vh', opacity: '1' }, 1500);
+                });
                 currentSectionIndex--;
             }
             else if (currentSectionIndex == 2) {
@@ -470,6 +479,7 @@
                     sections[1].className = '';
                 });
                 sections[0].className = 'active';
+                document.getElementById("vodkaRaspberry").style.display = "block";
                 $(".section-main").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
                 currentSectionIndex--;
             }
@@ -587,49 +597,58 @@
             //sections[currentSectionIndex].className = 'active';
         }
     });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#homeMenue').click(function () {   
+            hideItems();
 
-    function onMenueClick(option) {
-        //if selected option and current option is same, do nothing
-        if (option == currentSectionIndex) {
-            break;
-        }
+            sections[0].className = "active";
 
-        if (currentSectionIndex == 0) {
-            $(".section-main-image").stop(true, false).animate({ bottom: '100vh', opacity: '0' }, 1500);
-        }
-        else if (currentSectionIndex == 1) {
-            $("#ourStory").stop(true, false).fadeOut(1500, function ());
-        }
-        else if (currentSectionIndex == 2) {
-            $(".section-main").animate({ left: '-100%', opacity: '0' }, 1000, function () {
-                sections[0].className = '';
-            });
-        }
-        else if (currentSectionIndex == 3) {
-            $("#applePear").animate({ left: '-100%', opacity: '0' }, 1000, function () {
-                sections[1].className = '';
-            });
-        }
-        else if (currentSectionIndex == 4) {
-            $("#passionfruit").animate({ left: '-100%', opacity: '0' }, 1000, function () {
-                sections[2].className = '';
-            });
-        }
-        else if (currentSectionIndex == 5) {
-            $("#guavapink").animate({ left: '-100%', opacity: '0' }, 1000, function () {
-                sections[3].className = '';
-            });
-        }
-        else if (currentSectionIndex == 6) {
-            $("#pomegranate").animate({ left: '-100%', opacity: '0' }, 1000, function () {
-                sections[4].className = '';
-            });
-        }
-
-        if (option = 0) {
-            sections[0].className = 'active';
+            document.getElementById("wellcomeMsg").style.display = "block";
             $(".section-main").stop(true, false).animate({ left: '0px', opacity: '1' }, 1000);
-        }
+            $(".section-main-image").stop(true, false).animate({ bottom: '0vh', opacity: '1' }, 1500);
+
+            currentSectionIndex = 0;            
+        })
+
+        $('#productsMenue').click(function () {
+            hideItems();
+
+            sections[0].className = 'active';
+
+            document.getElementById("homePanel").style.display = "block";
+            $("#vodkaRaspberry").stop(true, false).fadeIn(1000);
+
+            currentSectionIndex = 2;
+        })
+        
+        $('#aboutUsMenue').click(function () {
+            hideItems();
+
+            sections[5].className = 'active';
+
+            document.getElementById("aboutUs").style.display = "block";
+
+            currentSectionIndex = 7;
+        })
+    })
+
+    function hideItems() {
+        closeNav();
+
+        sections[0].className = ' ';
+        sections[1].className = '';
+        sections[2].className = '';
+        sections[3].className = '';
+        sections[4].className = '';
+        sections[5].className = '';
+
+        //document.getElementsByClassName("section-main").style.display = "none";
+        //document.getElementsByClassName("section-main-image").style.display = "none";
+        document.getElementById("wellcomeMsg").style.display = "none";
+        document.getElementById("vodkaRaspberry").style.display = "none";
+        document.getElementById("ourStory").style.display = "none";
     }
 </script>
     </div>
