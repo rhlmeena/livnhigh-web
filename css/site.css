@@ -16,6 +16,7 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     overflow: hidden;
+    -webkit-user-drag: element;
 }
 
 h1 {
